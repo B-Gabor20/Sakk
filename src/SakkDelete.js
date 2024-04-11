@@ -7,18 +7,6 @@ export function SakkDelete(props) {
     const id = params.SakkId;
     const navigate = useNavigate();
     const [Sakk, setSakk] = useState([]);
-
-    useEffect(() => {
-        (async() => {
-            try {
-        const res = await fetch(`https://Sakk.kando-dev.eu/Sakk/${id}`)
-        const Sakk2 = await res.json();
-        setSakk(Sakk2);
-            } catch(error) {
-                console.log(error);
-            }
-    })();
-}, [id]);
 return (
     <div className="p-5 text-center content bg-whitesmoke">
             <h2>Sakkozó törlése</h2>
