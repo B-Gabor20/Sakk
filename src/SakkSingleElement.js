@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 export function SakkSingleElement() {
-    const { SakkId } = useParams(); // Meg kell változtatni az id-t SakkId-re, mivel az a neve az URL paraméternek.
+    const { SakkId } = useParams();
     const [Sakk, setSakk] = useState({});
     const [isFetchPending, setFetchPending] = useState(false);
 
